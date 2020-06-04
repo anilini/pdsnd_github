@@ -2,10 +2,10 @@
 04-06-2020
 
 ### Project Title
-Bikeshare Project
+Bikeshare Project by Norman
 
 ### Description
-Programm to analyse the bikeshare market in Washington, New York and Chicago.
+Program to analyse the bikeshare market in Washington, New York and Chicago. With terminal based user interface. 
 
 ### Files used
 bikeshare.py
