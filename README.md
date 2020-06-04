@@ -5,7 +5,7 @@
 Bikeshare Project by Norman
 
 ### Description
-Program to analyse the bikeshare market in Washington, New York and Chicago. With terminal based user interface. 
+Program to analyse the bikeshare market in Washington, New York and Chicago. With terminal based user interface.
 
 ### Files used
 bikeshare.py
@@ -17,3 +17,6 @@ washington.csv
 
 ### Credits
 udacity.com
+
+### Contact
+xxo12@freenet.de
