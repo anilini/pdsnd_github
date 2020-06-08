@@ -91,10 +91,14 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
+    #read data from csv
     df = pd.read_csv(CITY_DATA[city])
+
+    #convert time values to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['End Time'] = pd.to_datetime(df['End Time'])
 
+    #create nessasary columns
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
     df['hour'] = df['Start Time'].dt.hour
@@ -206,18 +210,16 @@ def user_stats(df, city):
     print('-'*40)
 
 def get_most_freq_of_column(df,column):
-    """Calcs the most freuent value in a column of a dataframe"""
+    """Calcs the most frequent value in a column of a dataframe"""
     max_value = df[column].mode()[0]
     print ("The most common {} (in your investigation interval) is:".format(column))
     print ("--> " + str(max_value))
 
 def main():
     while True:
+        #get user input and filter data
         city, month, day = get_filters()
         df = load_data(city, month, day)
-
-        #Bypass for programming
-        #df = load_data('new york city', 'all', 'all')
 
         #stat functions
         if not df.empty:
